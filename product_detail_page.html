@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Thông tin sản phẩm - Hortensias</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="Language" content="en-us" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- =====  LODER  ===== -->
+  <div class="loder"></div>
+  <div class="wrapper">
+    <div id="subscribe-me" class="modal animated fade in" role="dialog" data-keyboard="true" tabindex="-1">
+      <div class="newsletter-popup">
+        <img class="offer" src="images/newsbg.jpg" alt="offer" />
+        <div class="newsletter-popup-static newsletter-popup-top">
+          <div class="popup-text">
+            <div class="popup-title">20% <span>off</span></div>
+            <div class="popup-desc">
+              <div>ĐĂNG KÝ NGAY ĐỂ ĐƯỢC ƯU ĐÃI 20% CHO ĐƠN HÀNG TIẾP THEO</div>
+            </div>
+          </div>
+          <form onsubmit="return  validatpopupemail();" method="post">
+            <div class="form-group required">
+              <input type="email" name="email-popup" id="email-popup" placeholder="Nhập Email"
+                class="form-control input-lg" required />
+              <button type="submit" class="btn btn-default btn-lg" id="email-popup-submit">
+                ĐĂNG KÝ
+              </button>
+              <label class="checkme">
+                <input type="checkbox" value="" id="checkme" />Không hiện nữa</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- =====  HEADER START  ===== -->
+    <header id="header">
+      <div class="header-top">
+        <!-- <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+            </div>
+            <div class="col-xs-12 col-sm-8">
+              <ul class="header-top-right text-right">
+                <li class="account"><a href="login.html">Tài khoản</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="header">
+        <div class="container-fluid">
+          <div class="row headerLogo">
+            <div class="col-xs-12 col-sm-4">
+              <div id="acc">
+                <a href="login.html">TÀI KHOẢN</a>
+              </div>
+              <div class="main-search mt_40">
+                <input id="search-input" name="search" value="" placeholder="Tìm kiếm" class="form-control input-lg "
+                  autocomplete="off" type="text">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+                </span>
+              </div>
+
+            </div>
+            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="themini"
+                  src="images/logo_submark logo.png" style="object-fit: cover; width: 300px; height: 150px;"> </a>
+            </div>
+            <div class="col-xs-6 col-sm-4 shopcart">
+              <!-- <div id="acc">
+                <button type="button" class="btn" aria-expanded="true" style="float: flex;">
+                  <span>Tài khoản</span>
+                </button>
+              </div> -->
+
+              <div class="btn-group btn-block mtb_40">
+
+                <div id="cart" class="iconCart">
+                  <a href="cart.html" class="btn">
+                    <!-- <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse"
+                    aria-expanded="true" -->
+                    <span id="shippingcart">Giỏ hàng</span>
+                    <span id="cart-total" class="totalQuantity">Sản phẩm (0)</span>
+                  </a>
+                </div>
+              </div>
+              <div id="cart-dropdown" class="cart-menu collapse">
+                <ul>
+                  <li>
+                    <table class="table table-striped">
+                      <!-- <tbody>
+                        <tr>
+                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="Item"
+                                title=" Item"></a></td>
+                          <td class="text-left product-name"><a href="#">Manchester United Home Shirt</a> <span
+                              class="text-left price">$20.00</span>
+                            <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
+                          </td>
+                          <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="Item"
+                                title="Item"></a></td>
+                          <td class="text-left product-name"><a href="#">Manchester United Away Shirt</a> <span
+                              class="text-left price">$20.00</span>
+                            <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
+                          </td>
+                          <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td class="text-right"><strong>Sub-Total</strong></td>
+                          <td class="text-right">$40.00</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
+                          <td class="text-right">$2.00</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right"><strong>VAT (20%)</strong></td>
+                          <td class="text-right">$20.00</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right"><strong>Total</strong></td>
+                          <td class="text-right">$62.00</td>
+                        </tr>
+                      </tbody> -->
+                    </table>
+                  </li>
+                  <li>
+                    <form action="cart_page.html">
+                      <input class="btn pull-left mt_10" value="View cart" type="submit">
+                    </form>
+                    <form action="checkout_page.html">
+                      <input class="btn pull-right mt_10" value="Checkout" type="submit">
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <nav class="navbar">
+            <p>menu</p>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> <span
+                class="i-bar"><i class="fa fa-bars"></i></span></button>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+              <ul id="menu" class="nav navbar-nav">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+                <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+                <li><a href="category.html?category=nhan">Nhẫn</a></li>
+                <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+              </ul>
+            </div>
+            <!-- /.nav-collapse -->
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="cart-new">
+        <h2>
+            CART
+        </h2>
+
+        <div class="listCart">
+
+
+            <div class="item">
+                <img src="images/1.webp">
+                <div class="content">
+                    <div class="name">CoPilot / Black / Automatic</div>
+                    <div class="price">$550 / 1 product</div>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <span class="value">3</span>
+                    <button>+</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="buttons">
+            <div class="close">
+                CLOSE
+            </div>
+            <div class="checkout">
+                <a href="checkout.html">CHECKOUT</a>
+            </div>
+        </div>
+    </div>
+    <!-- =====  HEADER END  ===== -->
+    <!-- =====  CONTAINER START  ===== -->
+    <div class="container">
+      <div class="row ">
+        <!-- =====  BANNER STRAT  ===== -->
+        <div class="col-sm-12">
+          <div class="breadcrumb ptb_20">
+            <h1>New LCDScreen...</h1>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="category_page.html">Products</a></li>
+              <li class="active">New LCDS...</li>
+            </ul>
+          </div>
+        </div>
+        <!-- =====  BREADCRUMB END===== -->
+        <div id="column-left" class="col-sm-4 col-lg-3 hidden-xs">
+          <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+            <div class="nav-responsive">
+              <div class="heading-part">
+                <h2 class="main_title">DANH MỤC SẢN PHẨM</h2>
+              </div>
+              <ul class="nav  main-navigation collapse in">
+                <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+                <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+                <li><a href="category.html?category=nhan">Nhẫn</a></li>
+                <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="left_banner left-sidebar-widget mt_30 mb_40">
+            <a href="#"><img src="images/left.jpg" alt="Left Banner" class="img-responsive" /></a>
+          </div>
+          <div class="left-special left-sidebar-widget mb_50">
+            <div class="heading-part mb_10 ">
+              <h2 class="main_title">Sản phẩm bán chạy</h2>
+            </div>
+            <div id="left-special" class="owl-carousel">
+              <ul class="row">
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-1"></div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-10"></div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-14"></div>
+                </li>
+              </ul>
+              <ul class="row">
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-7"></div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-30"></div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-42"></div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-2"></div>
+                </li>
+              </ul>
+              <ul class="row ">
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-4"></div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-33"></div>
+                </li>
+                <li class="item product-layout-left mb_20">
+                  <div class="product-left" id="product-left-21"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-8 col-lg-9 mtb_20">
+          <div class="row mt_10 ">
+            <!-- product detail -->
+            <div id="productInfo"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div id="exTab5" class="mtb_30">
+                <ul class="nav nav-tabs">
+                  <li class="active">
+                    <a href="#1c" data-toggle="tab">Mô tả sản phẩm</a>
+                  </li>
+                  <li><a href="#2c" data-toggle="tab">Đánh giá</a></li>
+                </ul>
+                <div class="tab-content ">
+                  <div class="tab-pane active pt_20" id="1c">
+                    <p>
+                      Trang sức của chúng tôi được chế tác bằng Bạc pha với hợp kim với nhiều ưu điểm về độ bền và không
+                      gây kích ứng da kết hợp với ngọc trai, đá quý tạo ra phụ kiện độc đáo. <br>
+                      Phù hợp để trở thành một món quà ý nghĩa cho người thân yêu của bạn. Hortensias hỗ trợ gói quà
+                      tặng, viết thiệp, bạn chỉ cần đặt hàng và gửi yêu cầu đến chúng tôi. Món quà tuyệt với, đầy lãng
+                      mạn này sẽ đến tay người nhận đúng ngày kỷ niệm mà bạn mong muốn. <br>
+                      Lưu ý: Do màu sắc hiển thị máy tính là khác nhau, màu sắc thật có thể hơi khác so với hình trên,
+                      cảm ơn bạn đã tin tưởng lựa chọn sản phẩm của Hortensias.
+                    </p>
+                  </div>
+                  <!-- đánh giá  -->
+                  <div class="tab-pane" id="2c">
+                    <div class="product-rating">
+                      <div class="product-rating__avatar">
+                        <div class="avatar">
+                          <div class="avatar__placeholder"><svg enable-background="new 0 0 15 15" viewBox="0 0 15 15"
+                              x="0" y="0" class="shopee-svg-icon icon-headshot">
+                              <g>
+                                <circle cx="7.5" cy="4.5" fill="none" r="3.8" stroke-miterlimit="10"></circle>
+                                <path d="m1.5 14.2c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke-linecap="round"
+                                  stroke-miterlimit="10"></path>
+                              </g>
+                            </svg></div><img class="avatar__img"
+                            src="https://upanh123.com/wp-content/uploads/2020/12/anh-cute-meo5-768x768.jpg">
+                        </div>
+                      </div>
+                      <div class="product-rating__main">
+                        <div class="product-rating__author-name">huongd</div>
+                        <div class="repeat-purchase-con">
+                          <div class="rating">
+                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                class="fa fa-star fa-stack-1x"></i></span>
+                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                class="fa fa-star fa-stack-1x"></i></span>
+                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                class="fa fa-star fa-stack-1x"></i></span>
+                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                class="fa fa-star fa-stack-1x"></i></span>
+                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                class="fa fa-star fa-stack-x"></i></span>
+                          </div>
+                        </div>
+                        <div class="product-rating__time">2023-12-4 18:43 | Màu sắc: Trắng </div>
+                        <div
+                          style="position: relative; box-sizing: border-box; margin: 5px 0px; font-size: 14px; line-height: 2px; color: rgba(0, 0, 0, 0.87); word-break: break-word; white-space: pre-wrap;">
+                          <div>Tôi rất thích sản phẩm này</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="2c">
+                      <div class="product-rating">
+                        <div class="product-rating__avatar">
+                          <div class="avatar">
+                            <div class="avatar__placeholder"><svg enable-background="new 0 0 15 15" viewBox="0 0 15 15"
+                                x="0" y="0" class="shopee-svg-icon icon-headshot">
+                                <g>
+                                  <circle cx="7.5" cy="4.5" fill="none" r="3.8" stroke-miterlimit="10"></circle>
+                                  <path d="m1.5 14.2c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke-linecap="round"
+                                    stroke-miterlimit="10"></path>
+                                </g>
+                              </svg></div><img class="avatar__img"
+                              src="https://sieupet.com/sites/default/files/hinh_anh_meo_dep.jpg">
+                          </div>
+                        </div>
+                        <div class="product-rating__main">
+                          <div class="product-rating__author-name">kth295</div>
+                          <div class="repeat-purchase-con">
+                            <div class="rating">
+                              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                  class="fa fa-star fa-stack-1x"></i></span>
+                              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                  class="fa fa-star fa-stack-1x"></i></span>
+                              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                  class="fa fa-star fa-stack-1x"></i></span>
+                              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                  class="fa fa-star fa-stack-1x"></i></span>
+                              <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
+                                  class="fa fa-star fa-stack-x"></i></span>
+                            </div>
+                          </div>
+                          <div class="product-rating__time">2023-12-12 20:57 | Màu sắc: Bạc </div>
+                          <div
+                            style="position: relative; box-sizing: border-box; margin: 5px 0px; font-size: 14px; line-height: 2px; color: rgba(0, 0, 0, 0.87); word-break: break-word; white-space: pre-wrap;">
+                            <div>Sản phẩm rất đẹp</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- đánh giá sp -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="heading-part text-center mb_10">
+                  <h2 class="main_title mt_50">Các sản phẩm liên quan</h2>
+                </div>
+                <div class="related_pro box">
+                  <div class="product-layout  product-grid related-pro  owl-carousel mb_50 ">
+                    <div class="product-grid" id="product-grid-20"></div>
+                    <div class="product-grid" id="product-grid-3"></div>
+                    <div class="product-grid" id="product-grid-14"></div>
+                    <div class="product-grid" id="product-grid-35"></div>
+                    <div class="product-grid" id="product-grid-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- =====  CONTAINER END  ===== -->
+  <!-- =====  FOOTER START  ===== -->
+  <div class="footer pt_60">
+    <div class="container">
+      <div class="newsletters mt_30 mb_50">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="news-head pull-left">
+              <h2>Theo dõi ngay !</h2>
+              <div class="new-desc">Để trở thành một trong những khách hàng nhận được ưu đãi mới nhất!</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="news-form pull-right">
+              <form onsubmit="return validatemail();" method="post">
+                <div class="form-group required">
+                  <input name="email" id="email" placeholder="Nhập Email" class="form-control input-lg" required=""
+                    type="email">
+                  <button type="submit" class="btn btn-default btn-lg">Đăng ký</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Thông tin</h6>
+          <ul>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="delivery_policy.html">Chính sách giao hàng</a></li>
+            <li><a href="privacy_policy.html">Chính sách bảo mật</a></li>
+            <li><a href="return_policy.html">Chính sách đổi trả</a></li>
+            <li><a href="contact_us.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Sản phẩm</h6>
+          <ul>
+            <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+            <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+            <li><a href="category.html?category=nhan">Nhẫn</a></li>
+            <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Thông tin doanh nghiệp</h6>
+          <ul>
+            <li>669 Quốc lộ 1A,</li>
+            <li>Phường Linh Xuân, Thành phố Thủ Đức</li>
+            <li>(+84) 77 064 444</li>
+            <li>hortensiasjewwelry@company.com</li>
+            <!-- <li><a href="index.html">www.hortensias.jewwelry.com</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom mt_60 ptb_20">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="social_icon">
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="copyright-part text-center">@ Horrtensias 2023 All Rights Reserved </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- =====  FOOTER END  ===== -->
+  </div>
+  <a id="scrollup"></a>
+  <script src="js/jQuery_v3.1.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/product_details.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cart_page.js"></script>
+</body>
+
+</html>

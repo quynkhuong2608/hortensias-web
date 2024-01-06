@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hortensias</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="Language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- =====  LODER  ===== -->
+  <div class="loder"></div>
+  <div class="wrapper">
+    <div id="subscribe-me" class="modal animated fade in" role="dialog" data-keyboard="true" tabindex="-1">
+      <div class="newsletter-popup"> <img class="offer" src="images/left.jpg" alt="offer"
+          style="width: 350px; height: 450px; object-fit: cover;">
+        <div class="newsletter-popup-static newsletter-popup-top">
+          <div class="popup-text">
+            <div class="popup-title">20% <span>OFF</span></div>
+            <div class="popup-desc">
+              <div>Đăng ký ngay để được ưu đãi 20% cho đơn hàng tiếp theo</div>
+            </div>
+          </div>
+          <form onsubmit="return  validatpopupemail();" method="post">
+            <div class="form-group required">
+              <input type="email" name="email-popup" id="email-popup" placeholder="Nhập Email"
+                class="form-control input-lg" required />
+              <button type="submit" class="btn btn-default btn-lg" id="email-popup-submit">Đăng ký</button>
+              <label class="checkme">
+                <input type="checkbox" value="" id="checkme" /> Không hiện nữa</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- =====  HEADER START  ===== -->
+    <header id="header">
+      <div class="header-top">
+        <!-- <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+            </div>
+            <div class="col-xs-12 col-sm-8">
+              <ul class="header-top-right text-right">
+                <li class="account"><a href="login.html">Tài khoản</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="header">
+        <div class="container-fluid">
+          <div class="row headerLogo">
+            <div class="col-xs-12 col-sm-4">
+              <div id="acc">
+                <a href="login.html">TÀI KHOẢN</a>
+              </div>
+              <div class="main-search mt_40">
+                <input id="search-input" name="search" value="" placeholder="Tìm kiếm" class="form-control input-lg "
+                  autocomplete="off" type="text">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+                </span>
+              </div>
+
+            </div>
+            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="themini"
+                  src="images/logo_submark logo.png" style="object-fit: cover; width: 300px; height: 150px;"> </a>
+            </div>
+            <div class="col-xs-6 col-sm-4 shopcart">
+              <!-- <div id="acc">
+                <button type="button" class="btn" aria-expanded="true" style="float: flex;">
+                  <span>Tài khoản</span>
+                </button>
+              </div> -->
+
+              <div class="btn-group btn-block mtb_40">
+
+                <div id="cart">
+                  <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse"
+                    aria-expanded="true">
+                    <span id="shippingcart">Giỏ hàng</span>
+                    <span id="cart-total">Sản phẩm (0)</span>
+                  </button>
+                </div>
+              </div>
+              <div id="cart-dropdown" class="cart-menu collapse">
+                <ul>
+                  <li>
+                    <table class="table table-striped">
+                      <!-- <tbody>
+                        <tr>
+                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="Item"
+                                title=" Item"></a></td>
+                          <td class="text-left product-name"><a href="#">Manchester United Home Shirt</a> <span
+                              class="text-left price">$20.00</span>
+                            <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
+                          </td>
+                          <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="Item"
+                                title="Item"></a></td>
+                          <td class="text-left product-name"><a href="#">Manchester United Away Shirt</a> <span
+                              class="text-left price">$20.00</span>
+                            <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
+                          </td>
+                          <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td class="text-right"><strong>Sub-Total</strong></td>
+                          <td class="text-right">$40.00</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right"><strong>Eco Tax (-2.00)</strong></td>
+                          <td class="text-right">$2.00</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right"><strong>VAT (20%)</strong></td>
+                          <td class="text-right">$20.00</td>
+                        </tr>
+                        <tr>
+                          <td class="text-right"><strong>Total</strong></td>
+                          <td class="text-right">$62.00</td>
+                        </tr>
+                      </tbody> -->
+                    </table>
+                  </li>
+                  <li>
+                    <form action="cart_page.html">
+                      <input class="btn pull-left mt_10" value="View cart" type="submit">
+                    </form>
+                    <form action="checkout_page.html">
+                      <input class="btn pull-right mt_10" value="Checkout" type="submit">
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <nav class="navbar">
+            <p>menu</p>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> <span
+                class="i-bar"><i class="fa fa-bars"></i></span></button>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+              <ul id="menu" class="nav navbar-nav">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+                <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+                <li><a href="category.html?category=nhan">Nhẫn</a></li>
+                <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+              </ul>
+            </div>
+            <!-- /.nav-collapse -->
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- =====  HEADER END  ===== -->
+    <!-- =====  CONTAINER START  ===== -->
+    <div class="container mt_30">
+      <div class="row ">
+        <div id="column-left" class="col-sm-4 col-lg-3 hidden-xs">
+          <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+            <div class="nav-responsive">
+              <div class="heading-part">
+                <h2 class="main_title">Danh mục hàng đầu</h2>
+              </div>
+              <ul class="nav  main-navigation collapse in">
+                <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+                <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+                <li><a href="category.html?category=nhan">Nhẫn</a></li>
+                <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="left_banner left-sidebar-widget mt_30 mb_40"> <a href="#"><img src="images/left.jpg"
+                alt="Left Banner" class="img-responsive" /></a> </div>
+        </div>
+        <div class="col-sm-8 col-lg-9 mtb_20">
+          <!-- contact  -->
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="panel-login panel">
+                <div class="panel-heading">
+                  <div class="row mb_20">
+                    <div class="col-xs-6">
+                      <a href="#" class="active" id="login-form-link">Đăng nhập</a>
+                    </div>
+                    <div class="col-xs-6">
+                      <a href="#" id="register-form-link">Đăng ký</a>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <form id="login-form" action="#" method="post" onsubmit="login(event)">
+                        <div class="form-group">
+                          <input type="text" name="username" id="username1" tabindex="1" class="form-control"
+                            placeholder="Tên đăng nhập" value="">
+                        </div>
+                        <div class="form-group password-input">
+                          <input type="password" name="password" id="password" tabindex="2" class="form-control"
+                            placeholder="Mật khẩu">
+                          <i class="bi bi-eye-slash" onclick="togglePasswordVisibility('password')"></i>
+                        </div>
+                        <p id="error">Nhập sai tên đăng nhập hoặc mật khẩu</p>
+                        <div class="form-group text-center">
+                          <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                          <label for="remember"> Lưu thông tin cho lần sau</label>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                              <input type="submit" name="login-submit" id="login-submit" tabindex="4"
+                                class="form-control btn btn-login" value="Đăng nhập">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="text-center">
+                                <a href="#" tabindex="5" class="forgot-password">Quên mật khẩu?</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <form id="register-form" action="#" method="post">
+                        <div class="form-group">
+                          <input type="text" name="username" id="username" tabindex="1" class="form-control"
+                            placeholder="Tên đăng nhập" value="">
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="email" id="email" tabindex="1" class="form-control"
+                            placeholder="Địa chỉ Email" value="">
+                        </div>
+                        <div class="form-group password-input">
+                          <input type="password" name="password" id="password2" tabindex="2" class="form-control"
+                            placeholder="Mật khẩu">
+                          <i class="bi bi-eye-slash" onclick="togglePasswordVisibility('password2')"></i>
+                        </div>
+                        <div class="form-group password-input">
+                          <input type="password" name="confirm-password" id="confirm-password" tabindex="2"
+                            class="form-control" placeholder="Xác nhận mật khẩu">
+                          <i class="bi bi-eye-slash" onclick="togglePasswordVisibility('confirm-password')"></i>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                              <input type="submit" name="register-submit" id="register-submit" tabindex="4"
+                                class="form-control btn btn-register" value="Đăng ký ngay">
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- =====  CONTAINER END  ===== -->
+  <!-- =====  FOOTER START  ===== -->
+  <div class="footer pt_60">
+    <div class="container">
+      <div class="newsletters mt_30 mb_50">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="news-head pull-left">
+              <h2>Theo dõi ngay !</h2>
+              <div class="new-desc">Để trở thành một trong những khách hàng nhận được ưu đãi mới nhất!</div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="news-form pull-right">
+              <form onsubmit="return validatemail();" method="post">
+                <div class="form-group required">
+                  <input name="email" id="email" placeholder="Nhập Email" class="form-control input-lg" required=""
+                    type="email">
+                  <button type="submit" class="btn btn-default btn-lg">Đăng ký</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Thông tin</h6>
+          <ul>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="delivery_policy.html">Chính sách giao hàng</a></li>
+            <li><a href="privacy_policy.html">Chính sách bảo mật</a></li>
+            <li><a href="return_policy.html">Chính sách đổi trả</a></li>
+            <li><a href="contact_us.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Sản phẩm</h6>
+          <ul>
+            <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+            <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+            <li><a href="category.html?category=nhan">Nhẫn</a></li>
+            <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Thông tin doanh nghiệp</h6>
+          <ul>
+            <li>669 Quốc lộ 1A,</li>
+            <li>Phường Linh Xuân, Thành phố Thủ Đức</li>
+            <li>(+84) 77 064 444</li>
+            <li>hortensiasjewwelry@company.com</li>
+            <!-- <li><a href="index.html">www.hortensias.jewwelry.com</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom mt_60 ptb_20">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="social_icon">
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="copyright-part text-center">@ Horrtensias 2023 All Rights Reserved </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- =====  FOOTER END  ===== -->
+  <a id="scrollup"></a>
+  <script src="js/jQuery_v3.1.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/custom.js"></script>
+
+</html>

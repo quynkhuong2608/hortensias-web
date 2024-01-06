@@ -1,0 +1,29 @@
+<customers>
+  <customer>
+    <username>user1</username>
+    <password>pass1</password>
+    <name>Nguyễn Văn Long</name>
+    <phone>0987654321</phone>
+    <email>nvlong@gmail.com</email>
+    <address>Chung cư Lạc Long Quân, phường 5, Quận 11</address>
+    <image>images/customer/img_cus1.png</image>
+  </customer>
+  <customer>
+    <username>user2</username>
+    <password>pass2</password>
+    <name>Hoàng Thị Bình</name>
+    <phone>0967654322</phone>
+    <email>bnh@gmail.com</email>
+    <address>180 Nguyễn Văn Thủ, phường Đa Kao, Quận 1</address>
+    <image>images/customer/img_cus2.png</image>
+  </customer>
+  <customer>
+    <username>user3</username>
+    <password>pass3</password>
+    <name>Vũ Minh Toán</name>
+    <phone>0904655563</phone>
+    <email>toan@gmail.com</email>
+    <address>2/29 Cao Thắng, phường 5, Quận 3</address>
+    <image>images/customer/img_cus3.png</image>
+  </customer>
+</customers>

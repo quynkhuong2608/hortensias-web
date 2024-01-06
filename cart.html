@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <h1>Giỏ hàng</h1>
+  <!-- <div id="cartItems"></div> -->
+  <div class="cart-container">
+    <div class="col-sm-8 col-lg-9 mtb_20">
+      <form enctype="multipart/form-data" method="post" action="#">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="cartTable">
+            <thead>
+              <tr>
+                <th class="text-center">Hình ảnh sản phẩm</th>
+                <th class="text-left">Tên sản phẩm</th>
+                <!-- <th class="text-left">Mẫu mã</th> -->
+                <th class="text-left">Số lượng</th>
+                <th class="text-right">Đơn giá</th>
+                <!-- <th class="text-right">Tổng cộng</th> -->
+              </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+            <!-- <div id='cartItems'></div> -->
+          </table>
+        </div>
+      </form>
+    </div>
+    <div class="cart-items">
+      <div class="panel-body cart-items">
+        <label for="input-coupon" class="col-sm-4 control-label">Enter your coupon here</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="input-coupon" placeholder="Enter your coupon here" value=""
+            name="coupon" />
+          <span class="input-group-btn">
+            <input type="button" class="btn" data-loading-text="Loading..." id="button-coupon" value="Apply Coupon" />
+          </span>
+        </div>
+      </div>
+      <div id="totalofprice"></div>
+    </div>
+  </div>
+
+  <script>
+    // Function to display cart items on the cart page
+    function displayCart() {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      var cartItemsContainer = document.getElementById('cartItems');
+      var totalPriceElement = document.getElementById('totalofprice');
+      var total = 0;
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Giỏ hàng của bạn chưa có sản phẩm nào</p>';
+      } else {
+        var cartHTML = "";
+        totalPriceElement.innerHTML = '';
+        cart.forEach(item => {
+          var numericPrice = parseFloat(item.price.replace(/[^\d.]/g, ''));
+
+          cartHTML += `<tr><td><img src="${item.image}" alt="Hình ảnh sản phẩm" style="max-width: 50px;"></td>
+          <td>${item.title} </td>
+          <td>
+                            <button onclick="changeQuantity(${cart.indexOf(item)}, -1)">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="changeQuantity(${cart.indexOf(item)}, 1)">+</button> 
+          <td>${item.price.toLocaleString()} VNĐ</td></tr>`;
+          total += numericPrice * Number(item.quantity);
+          // You can customize the displayed information as needed
+        });
+        // cartHTML += '</tr>';
+        cartItemsContainer.innerHTML = cartHTML;
+        totalPriceElement.innerHTML = `<p>Tổng tiền: ${total.toLocaleString()} VNĐ</p>`;
+      }
+    }
+
+
+    // Display cart items when the cart page loads
+    displayCart();
+    function changeQuantity(index, change) {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      var updatedCart = [];
+
+      cart.forEach((item, i) => {
+        if (i === index) {
+          item.quantity += change;
+
+          // Remove the item if the quantity becomes 0
+          if (item.quantity > 0) {
+            updatedCart.push(item);
+          }
+        } else {
+          updatedCart.push(item);
+        }
+      });
+
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      displayCart();
+    }
+  </script>
+</body>
+
+</html>

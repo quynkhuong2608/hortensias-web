@@ -1,0 +1,18 @@
+<users>
+  <customer>
+    <username>user1</username>
+    <password>pass1</password>
+  </customer>
+  <customer>
+    <username>user2</username>
+    <password>pass2</password>
+  </customer>
+  <customer>
+    <username>user3</username>
+    <password>pass3</password>
+  </customer>
+  <admin>
+    <username>admin1</username>
+    <password>password1</password>
+  </admin>
+</users>
