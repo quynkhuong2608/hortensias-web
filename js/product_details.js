@@ -54,7 +54,7 @@ function category() {
                               <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
                                       class="fa fa-star fa-stack-x"></i></span>
                           </div>
-                          <span class="price"><span class="amount"><span class="currencySymbol"></span>${price}</span>
+                          <span class="price"><span class="amount"><span class="currencySymbol"></span>${parseFloat(price).toLocaleString()} VNĐ</span>
                           </span>
                           <p class="product-desc mt_20 mb_60">
                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium rem facere molestias
@@ -353,19 +353,8 @@ function addToCart(product) {
 // Update the "Add to cart" button to call addToCart function
 // document.querySelector('.add-to-cart a').addEventListener('click', function(event) {
 //   event.preventDefault();
-document.getElementById('add-to-cart').addEventListener('click', function(event) {
-  event.preventDefault();
-
-  // // Retrieve product details from localStorage
-  // var clickedProduct = localStorage.getItem('product');
-  // if (clickedProduct) {
-  //   var parser = new DOMParser();
-  //   var product = parser.parseFromString(clickedProduct, 'text/xml').documentElement;
-
-  //   var title = product.getElementsByTagName("title")[0]?.textContent;
-  //   var price = product.getElementsByTagName("price")[0]?.textContent;
-  //   var image = product.getElementsByTagName("image")[0]?.textContent;
-
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('add-to-cart').addEventListener('click', function(event) {
 
   var xmlContent = localStorage.getItem('xmlData');
   var localStorageTitle = localStorage.getItem('title');
@@ -406,6 +395,7 @@ document.getElementById('add-to-cart').addEventListener('click', function(event)
     console.error('Product details not found.');
   }
 });
+  });
 
 // SHOW CATEGORY
 

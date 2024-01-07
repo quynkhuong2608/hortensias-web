@@ -4877,9 +4877,10 @@ tbody.collapse.in {
 .input-group .form-control {
   position: relative;
   z-index: 2;
-  float: left;
+  float: right;
   width: 100%;
   margin-bottom: 0;
+  margin: 0;
 }
 
 .input-group .form-control:focus {
@@ -6839,6 +6840,10 @@ button.list-group-item-danger.active:focus {
 
 .panel-body {
   padding: 15px;
+}
+
+.panel-body1 {
+  padding: 5px;
 }
 
 .panel-heading {
