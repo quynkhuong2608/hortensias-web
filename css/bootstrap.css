@@ -2085,7 +2085,16 @@ pre code {
 .col-xs-12,
 .col-sm-12,
 .col-md-12,
-.col-lg-12 {
+.col-lg-12,
+.col-lg,
+.col-sm {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-total {
   position: relative;
   min-height: 1px;
   padding-right: 10px;
@@ -2328,6 +2337,14 @@ pre code {
     float: left;
   }
 
+  .col-sm {
+    float: right;
+  }
+
+  .col-total {
+    float: right;
+  }
+
   .col-sm-12 {
     width: 100%;
   }
@@ -2348,6 +2365,10 @@ pre code {
     width: 66.66666667%;
   }
 
+  .col-total {
+    width: 30%;
+  }
+
   .col-sm-7 {
     width: 58.33333333%;
   }
@@ -2361,6 +2382,10 @@ pre code {
   }
 
   .col-sm-4 {
+    width: 33.33333333%;
+  }
+
+  .col-sm {
     width: 33.33333333%;
   }
 
@@ -2772,6 +2797,10 @@ pre code {
     float: left;
   }
 
+  .col-lg {
+    float: right;
+  }
+
   .col-lg-12 {
     width: 100%;
   }
@@ -2809,6 +2838,10 @@ pre code {
   }
 
   .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg {
     width: 25%;
   }
 

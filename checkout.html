@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="" />
+  <title>Document</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/4eeb94ebc8.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="css/shipping.css">
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #shippingitem {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #shippingitemDetails {
+      width: 60%;
+      padding: 20px;
+    }
+
+    #shippingAdd,
+    #paymentMethod {
+      margin-top: 20px;
+    }
+
+    /* Add media query for responsiveness */
+    @media only screen and (max-width: 768px) {
+      #shippingitem {
+        flex-direction: column;
+      }
+
+      #shippingitemDetails {
+        width: 100%;
+      }
+    }
+
+    /* payment.css */
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #paymentitem {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #paymentitemDetails {
+      width: 60%;
+      padding: 20px;
+    }
+
+    #userCartinfo {
+      width: 35%;
+    }
+
+    /* Add media query for responsiveness */
+    @media only screen and (max-width: 768px) {
+      #paymentitem {
+        flex-direction: column;
+      }
+
+      #paymentitemDetails,
+      #userCartinfo {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      #userCartinfo {
+        padding-top: 150px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="shippingitem">
+    <div id="shippingitemDetails">
+      <a href="index.html" class="sitelogo">
+        <img src="images/logo_payment.png" alt="" width="40%">
+      </a>
+      <div id="siteicons">
+        <a href="cart.html">Giỏ hàng</a>
+        <!-- <i class="fa-solid fa-chevron-right"></i>
+        <a href="checkout.html">Thông tin đơn hàng</a> -->
+        <!-- <i class="fa-solid fa-chevron-right"></i>
+        <a href="shipping.html">Giao hàng</a> -->
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="#">Thanh toán</a>
+      </div>
+      <div id="shippingAdd">
+        <h2 style="font-size:18px; font-weight: 475;">Thông tin giao hàng</h2>
+        <!-- <input type="text" placeholder="Họ và tên người nhận" id="ten_nguoinhan" name="ten_nguoinhan"> -->
+        <input type="text" placeholder="Họ và tên người nhận" required>
+        <input type="text" placeholder="Số nhà" required>
+        <div class="addressinfo">
+          <input type="text" placeholder="Phường" required>
+          <input type="text" placeholder="Quận" required>
+          <input type="text" placeholder="Thành phố" required>
+        </div>
+        <input type="text" placeholder="Địa chỉ khác (nếu có)">
+        <input type="text" style="margin-bottom: 10px;" placeholder="Liên lạc" required>
+
+        <!-- <div class="contactInfo">
+                    <div class="contact">Contact</div>
+                    <div id="email" style="margin-left:30px;"></div>
+                    <a href="checkout.html">
+                        <span>Change</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="shippInfo">
+                    <div class="shipto">ship to</div>
+                    <div id="address"></div>
+                    <a href="checkout.html">
+                        <span>Change</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="methodInfo">
+                    <div class="method">Method</div>
+                    <div id="methodfree"></div> -->
+
+        <!-- </div> -->
+      </div>
+      <div id="paymentMethod">
+        <h2 style="font-size:18px; font-weight: 475;">Phương thức thanh toán</h2>
+        <p style="margin-top:-10px">Tất cả giao dịch đều được bảo mật và mã hóa.</p>
+        <div id="selectcards">
+          <div class="free">
+            <input type="radio" id="tienmat" value="Tiền mặt" name="selectpayemt" checked>
+            <label for="tienmat">
+              <span>Tiền mặt</span>
+          </div>
+          <hr>
+          <div class="free">
+            <input type="radio" id="vnpay" value="VNPay" name="selectpayemt">
+            <label for="vnpay">
+              <span>Chuyển khoản ngân hàng</span>
+          </div>
+          <!-- <div class="VNPay selectt">
+            <p style="margin-top:-10px">Ngân hàng: Chủ tài khoản: Lưu ý ghi chú.</p>
+          </div> -->
+          <hr>
+          <div class="free">
+            <input type="radio" id="standard" value="Standard" name="selectpayemt">
+            <label for="standard">
+              <span>Thẻ thanh toán quốc tế</span>
+              <!-- <img src="images/the_quoc_te.png" alt="" width="40%" height="50%"> -->
+            </label>
+          </div>
+          <!-- <hr>
+                    <div class="paymentcards" id="selectt">
+                        <input type="text" placeholder="Số thẻ" required>
+                        <input type="text" placeholder="Tên chủ thẻ" required>
+                        <div id="date">
+                            <input type="text" placeholder="Ngày hết hạn (MM/YY)" required>
+                            <input type="text" placeholder="Mã bảo mật" required>
+                        </div>
+                    </div> -->
+        </div>
+      </div>
+      <!-- <div id="addresschange">
+                <h2 style="font-size:18px; font-weight: 475;">Billing address</h2>
+                <p style="margin-top:-10px">Select the address that matches your card or payment method.</p>
+                <div id="whichAddress">
+                <input type="radio"  id="sameAsShhipping" checked value="Paypal">
+<label for="sameAsShhipping">
+                    <span>Same as shipping address</span>
+                <hr>
+                <input type="radio"  id="useDiffernt" value="Paypal">
+                    <label for="useDiffernt">
+                    <span>Use a different biling address</span>                      
+                </div>
+
+            </div>
+            <div id="remember">
+                <h2 style="font-size:18px; font-weight: 475;">Remember me</h2>
+                <div>
+                    <input type="checkbox" id="rememberMe" checked name="Remember me">
+                <label for="rememberMe">Save my information for faster checkout</label>
+                </div>
+            </div> -->
+
+      <!-- <div class="ContinuetoPayment">
+                <a href="shipping.html">
+                    <i class="fa-solid fa-chevron-left" style="color: black;"></i>
+                    <span id="againCart">Return to information</span></a>
+            </div> -->
+    </div>
+    <hr>
+
+    <!-- <div id="SelectedItems"></div> -->
+    <div id="userCartinfo">
+
+      <div>
+        <h3>Danh sách sản phẩm</h3>
+
+        <div id="selectedProducts"> </div>
+      </div>
+      <h2 id="textValue"></h2>
+      <div id="two">
+
+        <input type="text" id="promoInput" placeholder="Mã giảm giá">
+        <!-- <button id="promo">Áp dụng</button> -->
+        <input type="button" class="btn" data-loading-text="Loading..." id="button-coupon" value="Áp dụng" />
+      </div>
+
+      <!-- <div id="three">
+        <div class="sub">
+          <h4>Tạm tính</h4>
+          <h4 id="sub">0</h4>
+        </div> -->
+      <div class="ship">
+        <ul>
+          <li>Phí vận chuyển
+            <span style="float:right;">Miễn phí</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Thành tiền
+            <span id="totalPrice" style="float:right;"></span>
+          </li>
+        </ul>
+
+      </div>
+      <div class="complete">
+        <!-- <a href="index.html">
+          <button id="completepayment">Hoàn tất thanh toán</button>
+        </a> -->
+        <a href="index.html">
+          <input class="btn pull-right mt_30" type="submit" id="completedpayment" value="Hoàn tất thanh toán" /></a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- </div> -->
+
+  </div>
+
+  <script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-wsKH0P9ilKkAXI8LlDwfl4MS9iUOGDhPxNpCmT8hQ6LyOFp+ooaPyJ0gMZv5Z8pE"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+      function displaySelectedProducts() {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      var productContainer = document.getElementById('selectedProducts');
+      var totalPriceElement = document.getElementById('totalPrice');
+      var total = 0;
+
+      if (cart.length === 0) {
+        productContainer.innerHTML = '<p>No products selected</p>';
+        } else {
+          var productHTML = "";
+      totalPriceElement.innerHTML = '';
+
+          cart.forEach(item => {
+            var numericPrice = parseFloat(item.price.replace(/[^\d.]/g, ''));
+      productHTML += `
+      <li>${item.title} - ${item.quantity} x ${numericPrice.toLocaleString()} VNĐ<hr></li>
+      `;
+      total += numericPrice * Number(item.quantity);
+          });
+
+      productContainer.innerHTML = `<ul>${productHTML}</ul>`;
+      totalPriceElement.innerHTML = `<p>${total.toLocaleString()} VNĐ</p>`;
+        }
+      }
+
+      // Display selected products when the checkout page loads
+      displaySelectedProducts();
+  </script>
+  <script>
+      // Add a script tag at the end of your HTML body or in an external JavaScript file
+
+      document.getElementById('completedpayment').addEventListener('click', function() {
+        // Show an alert
+        alert('Đơn hàng đã được hoàn thành');
+
+        // Redirect to index.html
+        window.location.href = 'index.html';
+      });
+  </script>
+</body>
+
+</html>

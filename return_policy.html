@@ -17,10 +17,38 @@
 </head>
 
 <body>
-  <!-- =====  HEADER START  ===== -->
-  <header id="header">
-    <div class="header-top">
-      <!-- <div class="container">
+  <!-- =====  LODER  ===== -->
+  <div class="loder"></div>
+  <div class="wrapper">
+    <div id="subscribe-me" class="modal animated fade in" role="dialog" data-keyboard="true" tabindex="-1">
+      <div class="newsletter-popup">
+        <img class="offer" src="images/newsbg.jpg" alt="offer" />
+        <div class="newsletter-popup-static newsletter-popup-top">
+          <div class="popup-text">
+            <div class="popup-title">50% <span>off</span></div>
+            <div class="popup-desc">
+              <div>Sign up and get 50% off your next Order</div>
+            </div>
+          </div>
+          <form onsubmit="return  validatpopupemail();" method="post">
+            <div class="form-group required">
+              <input type="email" name="email-popup" id="email-popup" placeholder="Enter Your Email"
+                class="form-control input-lg" required />
+              <button type="submit" class="btn btn-default btn-lg" id="email-popup-submit">
+                Subscribe
+              </button>
+              <label class="checkme">
+                <input type="checkbox" value="" id="checkme" /> Dont show
+                again</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- =====  HEADER START  ===== -->
+    <header id="header">
+      <div class="header-top">
+        <!-- <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-4">
             </div>
@@ -31,48 +59,48 @@
             </div>
           </div>
         </div> -->
-    </div>
-    <div class="header">
-      <div class="container-fluid">
-        <div class="row headerLogo">
-          <div class="col-xs-12 col-sm-4">
-            <div id="acc">
-              <a href="login.html">TÀI KHOẢN</a>
-            </div>
-            <div class="main-search mt_40">
-              <input id="search-input" name="search" value="" placeholder="Tìm kiếm" class="form-control input-lg "
-                autocomplete="off" type="text">
-              <span class="input-group-btn">
-                <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
+      </div>
+      <div class="header">
+        <div class="container-fluid">
+          <div class="row headerLogo">
+            <div class="col-xs-12 col-sm-4">
+              <div id="acc">
+                <a href="login.html">TÀI KHOẢN</a>
+              </div>
+              <div class="main-search mt_40">
+                <input id="search-input" name="search" value="" placeholder="Tìm kiếm" class="form-control input-lg "
+                  autocomplete="off" type="text">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+                </span>
+              </div>
 
-          </div>
-          <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="themini"
-                src="images/logo_submark logo.png" style="object-fit: cover; width: 300px; height: 150px;"> </a>
-          </div>
-          <div class="col-xs-6 col-sm-4 shopcart">
-            <!-- <div id="acc">
+            </div>
+            <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="themini"
+                  src="images/logo_submark logo.png" style="object-fit: cover; width: 300px; height: 150px;"> </a>
+            </div>
+            <div class="col-xs-6 col-sm-4 shopcart">
+              <!-- <div id="acc">
                 <button type="button" class="btn" aria-expanded="true" style="float: flex;">
                   <span>Tài khoản</span>
                 </button>
               </div> -->
 
-            <div class="btn-group btn-block mtb_40">
+              <div class="btn-group btn-block mtb_40">
 
-              <div id="cart">
-                <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse"
-                  aria-expanded="true">
-                  <span id="shippingcart">Giỏ hàng</span>
-                  <span id="cart-total">Sản phẩm (0)</span>
-                </button>
+                <div id="cart">
+                  <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse"
+                    aria-expanded="true">
+                    <span id="shippingcart">Giỏ hàng</span>
+                    <span id="cart-total">Sản phẩm (0)</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div id="cart-dropdown" class="cart-menu collapse">
-              <ul>
-                <li>
-                  <table class="table table-striped">
-                    <!-- <tbody>
+              <div id="cart-dropdown" class="cart-menu collapse">
+                <ul>
+                  <li>
+                    <table class="table table-striped">
+                      <!-- <tbody>
                         <tr>
                           <td class="text-center"><a href="#"><img src="images/product/70x84.jpg" alt="Item"
                                 title=" Item"></a></td>
@@ -114,114 +142,125 @@
                           <td class="text-right">$62.00</td>
                         </tr>
                       </tbody> -->
-                  </table>
-                </li>
-                <li>
-                  <form action="cart_page.html">
-                    <input class="btn pull-left mt_10" value="View cart" type="submit">
-                  </form>
-                  <form action="checkout_page.html">
-                    <input class="btn pull-right mt_10" value="Checkout" type="submit">
-                  </form>
-                </li>
+                    </table>
+                  </li>
+                  <li>
+                    <form action="cart.html">
+                      <input class="btn pull-left mt_10" value="Giỏ hàng" type="submit">
+                    </form>
+                    <form action="checkout.html">
+                      <input class="btn pull-right mt_10" value="Thanh toán" type="submit">
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <nav class="navbar">
+            <p>menu</p>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> <span
+                class="i-bar"><i class="fa fa-bars"></i></span></button>
+            <div class="collapse navbar-collapse js-navbar-collapse">
+              <ul id="menu" class="nav navbar-nav">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+                <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+                <li><a href="category.html?category=nhan">Nhẫn</a></li>
+                <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+              </ul>
+            </div>
+            <!-- /.nav-collapse -->
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- =====  HEADER END  ===== -->
+    <!-- =====  CONTAINER START  ===== -->
+    <div class="container mt_30">
+      <div class="row ">
+        <div id="column-left" class="col-sm-4 col-lg-3 hidden-xs">
+          <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
+            <div class="nav-responsive">
+              <div class="heading-part">
+                <h2 class="main_title">Danh mục hàng đầu</h2>
+              </div>
+              <ul class="nav  main-navigation collapse in">
+                <!--<li><a href="#"></a></li>-->
+                <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+                <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+                <li><a href="category.html?category=nhan">Nhẫn</a></li>
+                <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
               </ul>
             </div>
           </div>
+          <div class="left_banner left-sidebar-widget mt_30 mb_40"> <a href="#"><img src="images/left.jpg"
+                alt="Left Banner" class="img-responsive" /></a> </div>
         </div>
-        <nav class="navbar">
-          <p>menu</p>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> <span
-              class="i-bar"><i class="fa fa-bars"></i></span></button>
-          <div class="collapse navbar-collapse js-navbar-collapse">
-            <ul id="menu" class="nav navbar-nav">
-              <li><a href="index.html">Trang chủ</a></li>
-              <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
-              <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
-              <li><a href="category.html?category=nhan">Nhẫn</a></li>
-              <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
-              <li><a href="about.html">Giới thiệu</a></li>
-            </ul>
-          </div>
-          <!-- /.nav-collapse -->
-        </nav>
-      </div>
-    </div>
-  </header>
-  <!-- =====  HEADER END  ===== -->
-  <!-- =====  CONTAINER START  ===== -->
-  <div class="container mt_30">
-    <div class="row ">
-      <div id="column-left" class="col-sm-4 col-lg-3 hidden-xs">
-        <div id="category-menu" class="navbar collapse in mb_40" aria-expanded="true" role="button">
-          <div class="nav-responsive">
-            <div class="heading-part">
-              <h2 class="main_title">Danh mục hàng đầu</h2>
-            </div>
-            <ul class="nav  main-navigation collapse in">
-              <!--<li><a href="#"></a></li>-->
-              <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
-              <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
-              <li><a href="category.html?category=nhan">Nhẫn</a></li>
-              <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="left_banner left-sidebar-widget mt_30 mb_40"> <a href="#"><img src="images/left.jpg"
-              alt="Left Banner" class="img-responsive" /></a> </div>
-      </div>
-      <div class="col-sm-8 col-lg-9 mtb_20">
-        <!-- about  -->
-        <div class="row">
-          <div class="col-md-12"> 
-            <div class="about-text">
-              <div class="about-heading-wrap">
-                <h2 class="about-heading mb_20">
-                  Chính sách đổi trả
-                </h2>
-              </div>
-              <div>Để đảm bảo quyền lợi của quý khách, Hortensias chấp nhận yêu cầu đổi/ trả sản phẩm hoặc hoàn tiền/ cọc theo các điều khoản và dịch vụ như sau:</div>
-            </br>
-              <p> <strong>1. NHỮNG TRƯỜNG HỢP ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong>
-              </p>
-              <p style="margin-left: 15px;">- Sản phẩm bị lỗi từ nhà sản xuất.</p>
-              <p style="margin-left: 15px;">- Sản phẩm bị giao sai về số lượng, thông tin và mẫu mã so với đơn đặt hàng.</p>
-              <p style="margin-left: 15px;">- Đơn hàng thanh toán trả trước bị hủy hoặc chưa giao thành công đến quý khách.</p>
-            </br>
-              <p><strong>2. ĐIỀU KIỆN ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong></p>
-              <p style="margin-left: 15px;">- Sản phẩm Hortensias nhận phải còn nguyên vẹn, không có dấu hiệu đã qua sử dụng.</p>
-              <p style="margin-left: 15px;">- Trong trường hợp sản phẩm bị lỗi hoặc hư hại do quá trình vận chuyển, quý khách vui lòng cung cấp video mở hàng/ hình ảnh hàng hóa ngay sau khi nhận hàng để Hortensias xác nhận.</p>
-            </br>
-              <p><strong>3. QUY TRÌNH ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong></p>
-              <p style="margin-left: 15px;">- Bước 1: Khách hàng liên hệ với Hortensias yêu cầu hoàn tiền. Để quá trình hoàn tiền được thuận lợi quý khách vui lòng cung cấp hình ảnh sản phẩm và xác nhận thời gian nhận hàng.</p>
-              <p style="margin-left: 15px;">- Bước 2: Hortensias rà soát và phản hồi kết quả soát xét.</p>
-              <p style="margin-left: 15px;">- Bước 3: Hortensias tiến hành thủ tục hoàn tiền.</p>
-            </br>
-              <p><strong>4. THỜI GIAN ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong></p>
-              <table Border="1" Cellpadding="5" Cellspacing="0" Bordercolor="#0f3564" Align="center" >
-                <tr Bgcolor="#0f3564" style="color: #f0f8ff;">
-                  <th>Phương thức thanh toán	</th>
-                  <th>Thời gian hoàn tiền dự kiến</th>
-                </tr>
-                <tr>
-                  <td>Thanh toán bằng Ví điện tử (ví Momo/Vnpay...)</td>
-                  <td rowspan="3">Từ 7 đến 15 ngày làm việc</td>
-                </tr>
-                <tr>
-                  <td>Thanh toán bằng Tiền mặt (cod)/chuyển khoản/ATM</td>
-                </tr>
-                <tr>
-                  <td>Thanh toán bằng thẻ ghi nợ/tín dụng (Visa/MasterCard/JCB)</td>
-                </tr>
-              </table>
-              <div>Khi phát hiện thông tin cá nhân của mình bị sử dụng sai mục đích hoặc phạm vi, khách hàng có thể gửi thông tin phản ánh và cung cấp chứng cứ liên quan tới vụ việc cho ban quản trị. Ban quản trị cam kết sẽ phản hồi ngay lập tức hoặc muộn nhất là trong vòng 24h làm việc kể từ thời điểm nhận được khiếu nại.</div>
-              <div><button type="button" class="btn mt_30">MUA NGAY</button>
+        <div class="col-sm-8 col-lg-9 mtb_20">
+          <!-- about  -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="about-text">
+                <div class="about-heading-wrap">
+                  <h2 class="about-heading mb_20">
+                    Chính sách đổi trả
+                  </h2>
+                </div>
+                <div>Để đảm bảo quyền lợi của quý khách, Hortensias chấp nhận yêu cầu đổi/ trả sản phẩm hoặc hoàn tiền/
+                  cọc theo các điều khoản và dịch vụ như sau:</div>
+                </br>
+                <p> <strong>1. NHỮNG TRƯỜNG HỢP ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong>
+                </p>
+                <p style="margin-left: 15px;">- Sản phẩm bị lỗi từ nhà sản xuất.</p>
+                <p style="margin-left: 15px;">- Sản phẩm bị giao sai về số lượng, thông tin và mẫu mã so với đơn đặt
+                  hàng.</p>
+                <p style="margin-left: 15px;">- Đơn hàng thanh toán trả trước bị hủy hoặc chưa giao thành công đến quý
+                  khách.</p>
+                </br>
+                <p><strong>2. ĐIỀU KIỆN ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong></p>
+                <p style="margin-left: 15px;">- Sản phẩm Hortensias nhận phải còn nguyên vẹn, không có dấu hiệu đã qua
+                  sử dụng.</p>
+                <p style="margin-left: 15px;">- Trong trường hợp sản phẩm bị lỗi hoặc hư hại do quá trình vận chuyển,
+                  quý khách vui lòng cung cấp video mở hàng/ hình ảnh hàng hóa ngay sau khi nhận hàng để Hortensias xác
+                  nhận.</p>
+                </br>
+                <p><strong>3. QUY TRÌNH ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong></p>
+                <p style="margin-left: 15px;">- Bước 1: Khách hàng liên hệ với Hortensias yêu cầu hoàn tiền. Để quá
+                  trình hoàn tiền được thuận lợi quý khách vui lòng cung cấp hình ảnh sản phẩm và xác nhận thời gian
+                  nhận hàng.</p>
+                <p style="margin-left: 15px;">- Bước 2: Hortensias rà soát và phản hồi kết quả soát xét.</p>
+                <p style="margin-left: 15px;">- Bước 3: Hortensias tiến hành thủ tục hoàn tiền.</p>
+                </br>
+                <p><strong>4. THỜI GIAN ĐỔI/ TRẢ HOẶC HOÀN TIỀN/ CỌC</strong></p>
+                <table Border="1" Cellpadding="5" Cellspacing="0" Bordercolor="#0f3564" Align="center">
+                  <tr Bgcolor="#0f3564" style="color: #f0f8ff;">
+                    <th>Phương thức thanh toán </th>
+                    <th>Thời gian hoàn tiền dự kiến</th>
+                  </tr>
+                  <tr>
+                    <td>Thanh toán bằng Ví điện tử (ví Momo/Vnpay...)</td>
+                    <td rowspan="3">Từ 7 đến 15 ngày làm việc</td>
+                  </tr>
+                  <tr>
+                    <td>Thanh toán bằng Tiền mặt (cod)/chuyển khoản/ATM</td>
+                  </tr>
+                  <tr>
+                    <td>Thanh toán bằng thẻ ghi nợ/tín dụng (Visa/MasterCard/JCB)</td>
+                  </tr>
+                </table>
+                <div>Khi phát hiện thông tin cá nhân của mình bị sử dụng sai mục đích hoặc phạm vi, khách hàng có thể
+                  gửi thông tin phản ánh và cung cấp chứng cứ liên quan tới vụ việc cho ban quản trị. Ban quản trị cam
+                  kết sẽ phản hồi ngay lập tức hoặc muộn nhất là trong vòng 24h làm việc kể từ thời điểm nhận được khiếu
+                  nại.</div>
+                <div><button type="button" class="btn mt_30"><a href="index.html">MUA NGAY</a></button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
   </div>
   <!-- =====  CONTAINER END  ===== -->

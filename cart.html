@@ -97,11 +97,11 @@
               <div id="cart-dropdown" class="cart-menu collapse">
                 <ul>
                   <li>
-                    <form action="cart_page.html">
-                      <input class="btn pull-left mt_10" value="View cart" type="submit">
+                    <form action="cart.html">
+                      <input class="btn pull-left mt_10" value="Giỏ hàng" type="submit">
                     </form>
-                    <form action="checkout_page.html">
-                      <input class="btn pull-right mt_10" value="Checkout" type="submit">
+                    <form action="checkout.html">
+                      <input class="btn pull-right mt_10" value="Thanh toán" type="submit">
                     </form>
                   </li>
                 </ul>
@@ -144,9 +144,8 @@
       </div>
 
       <!-- <div id="cartItems"></div> -->
-
-      <div class="col-sm-8 col-lg-9 mtb_20">
-        <div class="cart-container">
+      <div class="cart-table">
+        <div class="col-sm-8 col-lg-9 mtb_20">
           <form enctype="multipart/form-data" method="post" action="#">
             <div class="table-responsive">
               <table class="table table-bordered" id="cartTable">
@@ -164,183 +163,212 @@
                 <tbody id="cartItems"></tbody>
                 <!-- <div id='cartItems'></div> -->
               </table>
-            </div>
+
           </form>
-          <div class="cart-items">
-            <div class="panel-body cart-items">
-              <label for="input-coupon" class="col-sm-4 control-label">Enter your coupon here</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="input-coupon" placeholder="Enter your coupon here" value=""
-                  name="coupon" />
-                <span class="input-group-btn">
-                  <input type="button" class="btn" data-loading-text="Loading..." id="button-coupon"
-                    value="Apply Coupon" />
-                </span>
-              </div>
-            </div>
-            <div id="totalofprice"></div>
+          <div>
+            <form action="index.html">
+              <input class="btn pull-left mt_30" type="submit" value="Tiếp tục mua sắm" />
+            </form>
           </div>
         </div>
-        <form action="index.html">
-          <input class="btn pull-left mt_30" type="submit" value="Tiếp tục mua sắm" />
-        </form>
-        <form action="checkout.html">
-          <input class="btn pull-right mt_30" type="submit" value="Thanh toán" />
-        </form>
+      </div>
+
+
+
+      <div class="col-sm col-lg">
+        <div class="panel-body cart-items">
+          <h6>Nhập mã giảm giá</h6>
+          <label for="input-coupon" class="col-sm-4 control-label">
+          </label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="input-coupon" placeholder="Nhập mã giảm giá tại đây" value=""
+              name="coupon" />
+            <span class="input-group-btn">
+              <input type="button" class="btn" data-loading-text="Loading..." id="button-coupon" value="Áp dụng" />
+            </span>
+          </div>
+        </div>
+
+
+        <div class="total-price">
+          <ul>
+            <!-- <li>Tổng tiền hàng:
+              <span id="totalofprice" class="cart-price"></span>
+            </li> -->
+            <li>Phí vận chuyển:
+              <span class="cart-price">Miễn phí</span>
+            </li>
+            <li>Tổng cộng:
+              <span id="totalofprice" class="cart-price"></span>
+            </li>
+
+            <li>
+              <!-- <form action="checkout.html"> -->
+              <a href="checkout.html">
+                <input class="btn pull-right mt_30" type="submit" value="Thanh toán" /></a>
+              <!-- </form> -->
+              <!-- </div> -->
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
-    <!-- =====  CONTAINER END  ===== -->
-    <!-- =====  FOOTER START  ===== -->
-    <div class="footer pt_60">
-      <div class="container">
-        <div class="newsletters mt_30 mb_50">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="news-head pull-left">
-                <h2>Theo dõi ngay !</h2>
-                <div class="new-desc">Để trở thành một trong những khách hàng nhận được ưu đãi mới nhất!</div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="news-form pull-right">
-                <form onsubmit="return validatemail();" method="post">
-                  <div class="form-group required">
-                    <input name="email" id="email" placeholder="Nhập Email" class="form-control input-lg" required=""
-                      type="email">
-                    <button type="submit" class="btn btn-default btn-lg">Đăng ký</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+
+
+  <!-- =====  CONTAINER END  ===== -->
+  <!-- =====  FOOTER START  ===== -->
+  <div class="footer pt_60">
+    <div class="container">
+      <div class="newsletters mt_30 mb_50">
         <div class="row">
-          <div class="col-md-3 footer-block">
-            <h6 class="footer-title ptb_20">Thông tin</h6>
-            <ul>
-              <li><a href="about.html">Giới thiệu</a></li>
-              <li><a href="delivery_policy.html">Chính sách giao hàng</a></li>
-              <li><a href="privacy_policy.html">Chính sách bảo mật</a></li>
-              <li><a href="return_policy.html">Chính sách đổi trả</a></li>
-              <li><a href="contact_us.html">Liên hệ</a></li>
-            </ul>
+          <div class="col-sm-6">
+            <div class="news-head pull-left">
+              <h2>Theo dõi ngay !</h2>
+              <div class="new-desc">Để trở thành một trong những khách hàng nhận được ưu đãi mới nhất!</div>
+            </div>
           </div>
-          <div class="col-md-3 footer-block">
-            <h6 class="footer-title ptb_20">Sản phẩm</h6>
-            <ul>
-              <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
-              <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
-              <li><a href="category.html?category=nhan">Nhẫn</a></li>
-              <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-block">
-            <h6 class="footer-title ptb_20">Thông tin doanh nghiệp</h6>
-            <ul>
-              <li>669 Quốc lộ 1A,</li>
-              <li>Phường Linh Xuân, Thành phố Thủ Đức</li>
-              <li>(+84) 77 064 444</li>
-              <li>hortensiasjewwelry@company.com</li>
-              <!-- <li><a href="index.html">www.hortensias.jewwelry.com</a></li> -->
-            </ul>
+          <div class="col-sm-6">
+            <div class="news-form pull-right">
+              <form onsubmit="return validatemail();" method="post">
+                <div class="form-group required">
+                  <input name="email" id="email" placeholder="Nhập Email" class="form-control input-lg" required=""
+                    type="email">
+                  <button type="submit" class="btn btn-default btn-lg">Đăng ký</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div class="footer-bottom mt_60 ptb_20">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="social_icon">
-                <ul>
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
+      <div class="row">
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Thông tin</h6>
+          <ul>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="delivery_policy.html">Chính sách giao hàng</a></li>
+            <li><a href="privacy_policy.html">Chính sách bảo mật</a></li>
+            <li><a href="return_policy.html">Chính sách đổi trả</a></li>
+            <li><a href="contact_us.html">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Sản phẩm</h6>
+          <ul>
+            <li><a href="category.html?category=vong-tay">Vòng tay</a></li>
+            <li><a href="category.html?category=day-chuyen">Dây chuyền</a></li>
+            <li><a href="category.html?category=nhan">Nhẫn</a></li>
+            <li><a href="category.html?category=khuyen-tai">Khuyên tai</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-block">
+          <h6 class="footer-title ptb_20">Thông tin doanh nghiệp</h6>
+          <ul>
+            <li>669 Quốc lộ 1A,</li>
+            <li>Phường Linh Xuân, Thành phố Thủ Đức</li>
+            <li>(+84) 77 064 444</li>
+            <li>hortensiasjewwelry@company.com</li>
+            <!-- <li><a href="index.html">www.hortensias.jewwelry.com</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom mt_60 ptb_20">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="social_icon">
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+              </ul>
             </div>
-            <div class="col-sm-4">
-              <div class="copyright-part text-center">@ Horrtensias 2023 All Rights Reserved </div>
-            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="copyright-part text-center">@ Horrtensias 2023 All Rights Reserved </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- =====  FOOTER END  ===== -->
-    <!-- </div> -->
-    <a id="scrollup"></a>
-    <script src="js/jQuery_v3.1.1.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/custom.js"></script>
+  </div>
+  <!-- =====  FOOTER END  ===== -->
+  <!-- </div> -->
+  <a id="scrollup"></a>
+  <script src="js/jQuery_v3.1.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/custom.js"></script>
 
 
-    <script>
-      // Function to display cart items on the cart page
-      function displayCart() {
-        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+  <script>
+    // Function to display cart items on the cart page
+    function displayCart() {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        var cartItemsContainer = document.getElementById('cartItems');
-        var totalPriceElement = document.getElementById('totalofprice');
-        var total = 0;
-        if (cart.length === 0) {
-          cartItemsContainer.innerHTML = '<p>Giỏ hàng của bạn chưa có sản phẩm nào</p>';
-        } else {
-          var cartHTML = "";
-          totalPriceElement.innerHTML = '';
-          cart.forEach(item => {
-            var numericPrice = parseFloat(item.price.replace(/[^\d.]/g, ''));
+      var cartItemsContainer = document.getElementById('cartItems');
+      var totalPriceElement = document.getElementById('totalofprice');
+      var total = 0;
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Giỏ hàng của bạn chưa có sản phẩm nào</p>';
+      } else {
+        var cartHTML = "";
+        totalPriceElement.innerHTML = '';
+        cart.forEach(item => {
+          var numericPrice = parseFloat(item.price.replace(/[^\d.]/g, ''));
 
-            cartHTML += `<tr><td><img src="${item.image}" alt="Hình ảnh sản phẩm" style="max-width: 50px;"></td>
+          cartHTML += `<tr><td><img src="${item.image}" alt="Hình ảnh sản phẩm" style="max-width: 100px;"></td>
           <td>${item.title} </td>
           <td>
                             <button onclick="changeQuantity(${cart.indexOf(item)}, -1)">-</button>
                             <span>${item.quantity}</span>
                             <button onclick="changeQuantity(${cart.indexOf(item)}, 1)">+</button> 
           <td>${numericPrice.toLocaleString()
-              } VNĐ</td >
+            } VNĐ</td >
           <td><button onclick="removeItem(${cart.indexOf(item)})">Remove</button></td></tr > `;
-            total += numericPrice * Number(item.quantity);
-            // You can customize the displayed information as needed
-          });
-          // cartHTML += '</tr>';
-          cartItemsContainer.innerHTML = cartHTML;
-          totalPriceElement.innerHTML = `<p> Tổng tiền: ${total.toLocaleString()} VNĐ</p>`;
-        }
+          total += numericPrice * Number(item.quantity);
+          // You can customize the displayed information as needed
+        });
+        // cartHTML += '</tr>';
+        cartItemsContainer.innerHTML = cartHTML;
+        totalPriceElement.innerHTML = `<p>${total.toLocaleString()} VNĐ</p>`;
       }
+    }
 
 
-      // Display cart items when the cart page loads
-      displayCart();
-      function changeQuantity(index, change) {
-        var cart = JSON.parse(localStorage.getItem('cart')) || [];
-        var updatedCart = [];
+    // Display cart items when the cart page loads
+    displayCart();
+    function changeQuantity(index, change) {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      var updatedCart = [];
 
-        cart.forEach((item, i) => {
-          if (i === index) {
-            item.quantity += change;
+      cart.forEach((item, i) => {
+        if (i === index) {
+          item.quantity += change;
 
-            // Remove the item if the quantity becomes 0
-            if (item.quantity > 0) {
-              updatedCart.push(item);
-            }
-          } else {
+          // Remove the item if the quantity becomes 0
+          if (item.quantity > 0) {
             updatedCart.push(item);
           }
-        });
+        } else {
+          updatedCart.push(item);
+        }
+      });
 
-        localStorage.setItem('cart', JSON.stringify(updatedCart));
-        displayCart();
-      }
-      function removeItem(index) {
-        var cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        displayCart();
-      }
-    </script>
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      displayCart();
+    }
+    function removeItem(index) {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCart();
+    }
+  </script>
 </body>
 
 </html>

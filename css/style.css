@@ -1438,11 +1438,13 @@ label.checkme {
   font-weight: 700;
   line-height: 19px;
   text-transform: uppercase;
+  color: #fff;
 }
 
 #cart-total {
   clear: left;
   float: left;
+  color: #fff
 }
 
 #cart>.btn {
@@ -3433,12 +3435,39 @@ a.thumbnail.active {
 
 .cart-container {
   display: flex;
-  flex-direction: row;
-}
-
-.cart-items {
-  display: flex;
   flex-direction: column;
 }
+
+.cart-table {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+@media (max-width: 750px) {
+  .cart-table {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.total-price {
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-price,
+.totalPrice {
+  float: right;
+  color: #1d1750;
+  font-weight: bold;
+}
+
+/*  */
+
 
 /* =====  END RESPONSIVE CSS  =====*/

@@ -442,6 +442,9 @@ function loadProducts() {
         if (!image || !alt || !title || !price) {
           console.error('Missing product data');
           continue;
+
+          var addToCartButton = targetContainer.getElementById('add-to-cart');
+          addToCartButton.addEventListener('click', addToCartClick);
         }
 
         // Tạo HTML cho mỗi sản phẩm
@@ -456,7 +459,7 @@ function loadProducts() {
                     <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
                     <div class="quickview"><a href="#"><span>Quick View</span></a></div>
                     <div class="compare"><a href="#"><span>Compare</span></a></div>
-                    <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                    <div id="add-to-cart" class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
                   </div>
                 </div>
                 <div class="caption product-detail text-center">
@@ -469,7 +472,7 @@ function loadProducts() {
                   class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i
                     class="fa fa-star fa-stack-x"></i></span> </div>
                   <h6 class="product-name"><a href="#">${title}</a></h6>
-                  <span class="price"><span class="amount">${price}</span></span>
+                  <span class="price"><span class="amount">${parseFloat(price).toLocaleString()} VNĐ</span></span>
                 </div>
               </div>
             </div>
@@ -733,3 +736,5 @@ function updateXML(url, tag, data) {
   xmlHttp2.setRequestHeader('Content-Type', 'text/xml');
   xmlHttp2.send(xmlString);
 }
+
+// Function to handle "Add to Cart" button click

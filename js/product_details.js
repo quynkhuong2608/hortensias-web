@@ -242,13 +242,13 @@ function showProductDetails() {
                   <a href="#" title="${localStorageTitle}">${localStorageTitle}</a>
               </h4>
               <span class="price mb_20">
-                  <span class="amount"><span class="currencySymbol"></span>${xmlPrice}</span>
+                  <span class="amount"><span class="currencySymbol"></span>${parseFloat(xmlPrice).toLocaleString()} VNĐ</span>
               </span>
               <hr>
               <ul class="list-unstyled product_info mtb_20">
                   <li>
                       <label>Giá gốc:</label>
-                      <span> <a href="#">${xmlOriginalPrice}</a></span>
+                      <span> <a href="#">${parseFloat(xmlOriginalPrice).toLocaleString()} VNĐ</a></span>
                   </li>
                   <li>
                       <label>Giới tính:</label>
